@@ -9,6 +9,21 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let titleLogin: UILabel = {
+        let title = UILabel()
+        title.text = "Bankey"
+        title.textAlignment = .center
+        title.font = .systemFont(ofSize: 24, weight: .bold)
+        return title
+    }()
+    
+    let descLogin: UILabel = {
+        let desc = UILabel()
+        desc.text = "Your premium source for all\nthinks banking!"
+        desc.textAlignment = .center
+        return desc
+    }()
+    
     let loginView = LoginView()
     let sigInButton = UIButton(type: .system)
     let errorLabel = UILabel()
@@ -31,7 +46,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController{
     
     private func style(){
-        for view in [loginView, sigInButton, errorLabel]{
+        for view in [titleLogin, descLogin, loginView, sigInButton, errorLabel]{
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -48,11 +63,19 @@ extension LoginViewController{
     }
     
     private func layout(){
-        for view in [loginView, sigInButton, errorLabel]{
+        for view in [titleLogin, descLogin, loginView, sigInButton, errorLabel]{
             self.view.addSubview(view)
         }
         
         NSLayoutConstraint.activate([
+            
+            titleLogin.centerXAnchor.constraint(equalToSystemSpacingAfter: descLogin.centerXAnchor, multiplier: 1),
+            descLogin.topAnchor.constraint(equalToSystemSpacingBelow: titleLogin.bottomAnchor, multiplier: 3),
+            
+            descLogin.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            descLogin.rightAnchor.constraint(equalTo: loginView.rightAnchor),
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: descLogin.bottomAnchor, multiplier: 2),
+            
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),

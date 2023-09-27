@@ -13,6 +13,7 @@
 		B58102422AC29D920048F27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58102412AC29D920048F27A /* Assets.xcassets */; };
 		B58102452AC29D920048F27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58102432AC29D920048F27A /* LaunchScreen.storyboard */; };
 		B581024F2AC2B7380048F27A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581024E2AC2B7380048F27A /* LoginView.swift */; };
+		B58102522AC3DCCC0048F27A /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B58102442AC29D920048F27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B58102462AC29D920048F27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B581024E2AC2B7380048F27A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		B58102372AC29D900048F27A /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				B58102502AC3DCAD0048F27A /* OnBoarding */,
 				B581024D2AC2B7020048F27A /* Login */,
 				B581024C2AC2B6860048F27A /* Files */,
 				B58102382AC29D900048F27A /* AppDelegate.swift */,
@@ -81,6 +84,14 @@
 				B581024E2AC2B7380048F27A /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B58102502AC3DCAD0048F27A /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */,
+			);
+			name = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				B581023D2AC29D900048F27A /* LoginViewController.swift in Sources */,
 				B58102392AC29D900048F27A /* AppDelegate.swift in Sources */,
+				B58102522AC3DCCC0048F27A /* OnBoardingContainerViewController.swift in Sources */,
 				B581024F2AC2B7380048F27A /* LoginView.swift in Sources */,
 				B581023B2AC29D900048F27A /* SceneDelegate.swift in Sources */,
 			);
