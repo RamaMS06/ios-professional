@@ -21,17 +21,10 @@ class OnBoardingContainerViewController: UIViewController{
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        let listData = ["delorean" : "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in the 80s.", "world" : "Move your money around the world quickly and securely.", "thumbs" : "Learn more at www.bankey.com"]
         
-        let page1 = UIViewController()
-        let page2 = UIViewController()
-        let page3 = UIViewController()
-        
-        page1.view.backgroundColor = .systemRed
-        page2.view.backgroundColor = .systemBlue
-        page3.view.backgroundColor = .systemCyan
-        
-        for view in [page1, page2, page3]{
-            pages.append(view)
+        for (image, title) in listData{
+            pages.append(OnBoardingViewController(imageName: image, labelDesc: title))
         }
         
         currentVC = pages.first ?? UIViewController()

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = .init(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = OnBoardingViewController()
+        window?.rootViewController = OnBoardingContainerViewController()
         
         return true
     }

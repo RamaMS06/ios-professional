@@ -10,41 +10,50 @@ import UIKit
 
 class OnBoardingViewController: UIViewController{
     
-    let stackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 20
-        return stack
-    }()
+    private let stackView = UIStackView()
+    private let image = UIImageView()
+    private let label = UILabel()
+    private let imageName: String
+    private let labelDesc: String
     
-    let image: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
-        image.image = .init(named: "delorean")
-        return image
-    }()
+    init(imageName: String, labelDesc: String){
+        self.imageName = imageName
+        self.labelDesc = labelDesc
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = .preferredFont(forTextStyle: .title3)
-        label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 0
-        label.text = "Banker is faster, easy to use, and has brand new look and feel that will make you feel like you are back in 1989"
-        return label
-    }()
-    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        style()
         layout()
     }
 }
 
 extension OnBoardingViewController{
+    
+    private func style(){
+        view.backgroundColor = .white
+        for view in [stackView, image, label]{
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        
+        image.contentMode = .scaleAspectFit
+        image.image = .init(named: imageName)
+        
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .title3)
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 0
+        label.text = labelDesc
+        
+    }
+    
     private func layout(){
         view.addSubview(stackView)
         for view in [image, label]{
