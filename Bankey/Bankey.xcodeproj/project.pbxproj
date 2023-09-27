@@ -14,6 +14,7 @@
 		B58102452AC29D920048F27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58102432AC29D920048F27A /* LaunchScreen.storyboard */; };
 		B581024F2AC2B7380048F27A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581024E2AC2B7380048F27A /* LoginView.swift */; };
 		B58102522AC3DCCC0048F27A /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */; };
+		B58102542AC40C7F0048F27A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B58102462AC29D920048F27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B581024E2AC2B7380048F27A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
+		B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */,
+				B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */,
 			);
 			name = OnBoarding;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				B581023D2AC29D900048F27A /* LoginViewController.swift in Sources */,
 				B58102392AC29D900048F27A /* AppDelegate.swift in Sources */,
 				B58102522AC3DCCC0048F27A /* OnBoardingContainerViewController.swift in Sources */,
+				B58102542AC40C7F0048F27A /* OnBoardingViewController.swift in Sources */,
 				B581024F2AC2B7380048F27A /* LoginView.swift in Sources */,
 				B581023B2AC29D900048F27A /* SceneDelegate.swift in Sources */,
 			);
