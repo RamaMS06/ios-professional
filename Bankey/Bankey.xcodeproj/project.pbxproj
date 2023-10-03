@@ -15,6 +15,8 @@
 		B581024F2AC2B7380048F27A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581024E2AC2B7380048F27A /* LoginView.swift */; };
 		B58102522AC3DCCC0048F27A /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */; };
 		B58102542AC40C7F0048F27A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */; };
+		B581025F2ACBCCC50048F27A /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581025E2ACBCCC50048F27A /* DummyViewController.swift */; };
+		B58102622ACBE8D10048F27A /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102612ACBE8D10048F27A /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B581024E2AC2B7380048F27A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B58102512AC3DCCC0048F27A /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
 		B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		B581025E2ACBCCC50048F27A /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		B58102612ACBE8D10048F27A /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		B58102372AC29D900048F27A /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				B58102602ACBE8C20048F27A /* Utils */,
 				B58102502AC3DCAD0048F27A /* OnBoarding */,
 				B581024D2AC2B7020048F27A /* Login */,
 				B581024C2AC2B6860048F27A /* Files */,
@@ -84,6 +89,7 @@
 			children = (
 				B581023C2AC29D900048F27A /* LoginViewController.swift */,
 				B581024E2AC2B7380048F27A /* LoginView.swift */,
+				B581025E2ACBCCC50048F27A /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */,
 			);
 			name = OnBoarding;
+			sourceTree = "<group>";
+		};
+		B58102602ACBE8C20048F27A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B58102612ACBE8D10048F27A /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,12 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B581025F2ACBCCC50048F27A /* DummyViewController.swift in Sources */,
 				B581023D2AC29D900048F27A /* LoginViewController.swift in Sources */,
 				B58102392AC29D900048F27A /* AppDelegate.swift in Sources */,
 				B58102522AC3DCCC0048F27A /* OnBoardingContainerViewController.swift in Sources */,
 				B58102542AC40C7F0048F27A /* OnBoardingViewController.swift in Sources */,
 				B581024F2AC2B7380048F27A /* LoginView.swift in Sources */,
 				B581023B2AC29D900048F27A /* SceneDelegate.swift in Sources */,
+				B58102622ACBE8D10048F27A /* LocalState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -309,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UC9B6T5FMX;
@@ -318,6 +335,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +343,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.rama.Bankey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UC9B6T5FMX;
@@ -345,6 +365,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +373,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.rama.Bankey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
