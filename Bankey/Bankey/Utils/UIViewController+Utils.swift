@@ -2,18 +2,19 @@
 //  UIViewController+Utils.swift
 //  Bankey
 //
-//  Created by Kopnuspos on 04/10/23.
+//  Created by Rama Muhammad S on 04/10/23.
 //
 
 import UIKit
 
 extension UIViewController{
-    func setStatusBar(){
-        let statusBarView: UIView = .init(frame: .init(origin: .zero, size: UIApplication.shared.statusBarFrame.size))
-        
-        statusBarView.backgroundColor = appColor
-        view.addSubview(statusBarView)
-    }
+    func setStatusBar() {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithTransparentBackground() // to hide Navigation Bar Line also
+            navBarAppearance.backgroundColor = appColor
+            UINavigationBar.appearance().standardAppearance = navBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        }
     
     func setTabBarImage(imageName: String, title: String){
         let config = UIImage.SymbolConfiguration(scale: .large)

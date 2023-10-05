@@ -22,6 +22,8 @@
 		B58102542AC40C7F0048F27A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */; };
 		B581025F2ACBCCC50048F27A /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581025E2ACBCCC50048F27A /* DummyViewController.swift */; };
 		B58102622ACBE8D10048F27A /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58102612ACBE8D10048F27A /* LocalState.swift */; };
+		B5B9DF722ACEA46200896CC3 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B9DF712ACEA46200896CC3 /* AccountSummaryHeaderView.swift */; };
+		B5B9DF742ACEA4C900896CC3 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B9DF732ACEA4C900896CC3 /* AccountSummaryHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B58102532AC40C7F0048F27A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		B581025E2ACBCCC50048F27A /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		B58102612ACBE8D10048F27A /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		B5B9DF712ACEA46200896CC3 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		B5B9DF732ACEA4C900896CC3 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,6 @@
 		B56D3D8A2ACD199200BA04CF /* TabBarItem */ = {
 			isa = PBXGroup;
 			children = (
-				B56D3D8B2ACD19BA00BA04CF /* AccountSummaryViewController.swift */,
 				B56D3D8D2ACD19C800BA04CF /* MoveMoneyViewController.swift */,
 				B56D3D8F2ACD19D300BA04CF /* MoreViewController.swift */,
 			);
@@ -86,12 +89,13 @@
 			children = (
 				B58102382AC29D900048F27A /* AppDelegate.swift */,
 				B581023A2AC29D900048F27A /* SceneDelegate.swift */,
+				B56D3D882ACD18BC00BA04CF /* MainViewController.swift */,
 				B581024D2AC2B7020048F27A /* Login */,
 				B58102502AC3DCAD0048F27A /* OnBoarding */,
+				B5B9DF702ACEA0DA00896CC3 /* AccountSummary */,
 				B58102602ACBE8C20048F27A /* Utils */,
 				B581024C2AC2B6860048F27A /* Files */,
 				B56D3D8A2ACD199200BA04CF /* TabBarItem */,
-				B56D3D882ACD18BC00BA04CF /* MainViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -132,6 +136,16 @@
 				B56D3D862ACD16EE00BA04CF /* UIViewController+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B5B9DF702ACEA0DA00896CC3 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				B56D3D8B2ACD19BA00BA04CF /* AccountSummaryViewController.swift */,
+				B5B9DF712ACEA46200896CC3 /* AccountSummaryHeaderView.swift */,
+				B5B9DF732ACEA4C900896CC3 /* AccountSummaryHeaderView.xib */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B9DF742ACEA4C900896CC3 /* AccountSummaryHeaderView.xib in Resources */,
 				B58102452AC29D920048F27A /* LaunchScreen.storyboard in Resources */,
 				B58102422AC29D920048F27A /* Assets.xcassets in Resources */,
 			);
@@ -214,6 +229,7 @@
 				B581024F2AC2B7380048F27A /* LoginView.swift in Sources */,
 				B581023B2AC29D900048F27A /* SceneDelegate.swift in Sources */,
 				B56D3D8C2ACD19BA00BA04CF /* AccountSummaryViewController.swift in Sources */,
+				B5B9DF722ACEA46200896CC3 /* AccountSummaryHeaderView.swift in Sources */,
 				B58102622ACBE8D10048F27A /* LocalState.swift in Sources */,
 				B56D3D8E2ACD19C800BA04CF /* MoveMoneyViewController.swift in Sources */,
 				B56D3D892ACD18BC00BA04CF /* MainViewController.swift in Sources */,

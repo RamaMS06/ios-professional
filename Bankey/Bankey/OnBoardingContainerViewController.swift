@@ -2,7 +2,7 @@
 //  OnBoardingContainerViewController.swift
 //  Bankey
 //
-//  Created by Kopnuspos on 27/09/23.
+//  Created by Rama Muhammad S on 27/09/23.
 //
 
 import UIKit
@@ -76,9 +76,8 @@ extension OnBoardingContainerViewController{
         view.addSubview(pageViewController.view)
         view.addSubview(closeButton)
         view.addSubview(stackView)
-        
         pageViewController.didMove(toParent: self)
-        
+
         pageViewController.dataSource = self
         pageViewController.delegate = self
         didChangeDelegate = self

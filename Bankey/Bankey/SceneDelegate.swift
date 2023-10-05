@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Bankey
 //
-//  Created by Kopnuspos on 26/09/23.
+//  Created by Rama Muhammad S on 26/09/23.
 //
 
 import UIKit

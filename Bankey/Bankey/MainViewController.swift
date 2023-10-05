@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  Bankey
 //
-//  Created by Kopnuspos on 04/10/23.
+//  Created by Rama Muhammad S on 04/10/23.
 //
 
 import Foundation

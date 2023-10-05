@@ -2,7 +2,7 @@
 //  OnBoardingViewController.swift
 //  Bankey
 //
-//  Created by Kopnuspos on 27/09/23.
+//  Created by Rama Muhammad S on 27/09/23.
 //
 
 import Foundation
