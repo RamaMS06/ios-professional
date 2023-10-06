@@ -59,11 +59,13 @@ extension AccountSummaryViewController{
 
 extension AccountSummaryViewController{
     private func fetchData(){
-        let savings = AccountSummaryCell.ViewModel(accountType: .Banking, accountName: "Basic Savings")
-        let visa = AccountSummaryCell.ViewModel(accountType: .CreditCard, accountName: "Visa Avion Card")
-        let invesment = AccountSummaryCell.ViewModel(accountType: .Investment, accountName: "Tax-Free Saver")
+        let savings = AccountSummaryCell.ViewModel(accountType: .Banking, accountName: "Basic Savings", balance: 92123.21)
+        let visa = AccountSummaryCell.ViewModel(accountType: .CreditCard, accountName: "Visa Avion Card", balance: 12312.23)
+        let invesment = AccountSummaryCell.ViewModel(accountType: .Investment, accountName: "Tax-Free Saver", balance: 412.22)
+        let invesment2 = AccountSummaryCell.ViewModel(accountType: .Investment, accountName: "Growth Fund", balance: 1500.00)
+        let masterCard = AccountSummaryCell.ViewModel(accountType: .CreditCard, accountName: "MasterCard", balance: 121312.22)
         
-        for data in [savings, visa, invesment]{
+        for data in [savings, visa, invesment, invesment2, masterCard]{
             accounts.append(data)
         }
     }

@@ -19,6 +19,11 @@ class AccountSummaryCell: UITableViewCell{
     struct ViewModel{
         let accountType: AccountType
         let accountName: String
+        let balance: Decimal
+        
+        var balanceAttributeString: NSAttributedString {
+            return CurrentFormatter().makeAttributedCurrency(balance)
+        }
     }
     
     let viewModel: ViewModel? = nil
@@ -71,12 +76,12 @@ extension AccountSummaryCell{
         
         balanceLabel.font = .preferredFont(forTextStyle: .body)
         balanceLabel.adjustsFontForContentSizeCategory = true
-        balanceLabel.text = "Some Balance"
+        balanceLabel.text = "Current Balance"
         balanceLabel.textAlignment = .right
         
         balanceAmountLabel.font = .preferredFont(forTextStyle: .body)
         balanceAmountLabel.adjustsFontForContentSizeCategory = true
-        balanceAmountLabel.attributedText = makeFormatBalance(amount: "9123122")
+        balanceAmountLabel.attributedText = CurrentFormatter().makeAttributedCurrency(00000)
         balanceAmountLabel.textAlignment = .right
         
         balanceStackView.axis = .vertical
@@ -105,21 +110,6 @@ extension AccountSummaryCell{
             chevronImage.topAnchor.constraint(equalToSystemSpacingBelow: balanceStackView.topAnchor, multiplier: 1)
         ])
     }
-    
-    private func makeFormatBalance(amount: String) -> NSMutableAttributedString{
-        
-        let dollars: String = String(amount.dropLast(2))
-        let cents: String = String(amount.suffix(2))
-        
-        let rootString = NSMutableAttributedString(string: "$", attributes: [.font : UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8])
-        let dollarString = NSMutableAttributedString(string: dollars, attributes: [.font : UIFont.preferredFont(forTextStyle: .title1)])
-        let centString = NSMutableAttributedString(string: cents, attributes: [.font : UIFont.preferredFont(forTextStyle: .footnote), .baselineOffset: 8])
-        
-        rootString.append(dollarString)
-        rootString.append(centString)
-        
-        return rootString
-    }
 }
 
 extension AccountSummaryCell{
@@ -127,6 +117,8 @@ extension AccountSummaryCell{
         
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
+        
+        balanceAmountLabel.attributedText = vm.balanceAttributeString
         
         switch vm.accountType{
         case .Banking:
