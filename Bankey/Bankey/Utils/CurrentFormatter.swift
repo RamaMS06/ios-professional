@@ -15,7 +15,7 @@ struct CurrentFormatter{
         return makeBalanceAttributed(dollars: tuple.0, cents: tuple.1)
     }
     
-    private func breakIntoDollarsAndCents(_ amount: Decimal) -> (String, String){
+    func breakIntoDollarsAndCents(_ amount: Decimal) -> (String, String){
         //Separate amount before and after '.' into part
         let tuple = modf(amount.doubleValue)
         // amount: "999.00" -> "999"
@@ -28,6 +28,7 @@ struct CurrentFormatter{
     private func convertDollar(_ dollarPart: Double) -> String{
         let dollarsWithDecimal = dollarsFormatter(dollarPart)
         let formatter = NumberFormatter()
+//        formatter.locale = .init(identifier: "id_ID")
         let decimalSeparator = formatter.decimalSeparator!
         let dollarComponent = dollarsWithDecimal.components(separatedBy: decimalSeparator)
         var dollars = dollarComponent.first!
@@ -41,7 +42,7 @@ struct CurrentFormatter{
         return cents
     }
     
-    private func dollarsFormatter(_ dollars: Double) -> String{
+    func dollarsFormatter(_ dollars: Double) -> String{
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.usesGroupingSeparator = true
