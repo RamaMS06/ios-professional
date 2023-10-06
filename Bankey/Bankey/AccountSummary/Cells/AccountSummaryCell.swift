@@ -63,7 +63,7 @@ extension AccountSummaryCell{
         
         balanceAmountLabel.font = .preferredFont(forTextStyle: .body)
         balanceAmountLabel.adjustsFontForContentSizeCategory = true
-        balanceAmountLabel.text = "$929,466.63"
+        balanceAmountLabel.attributedText = makeFormatBalance(amount: "9123122")
         balanceAmountLabel.textAlignment = .right
         
         balanceStackView.axis = .vertical
@@ -91,5 +91,20 @@ extension AccountSummaryCell{
             rightAnchor.constraint(equalToSystemSpacingAfter: chevronImage.rightAnchor, multiplier: 2),
             chevronImage.topAnchor.constraint(equalToSystemSpacingBelow: balanceStackView.topAnchor, multiplier: 1)
         ])
+    }
+    
+    private func makeFormatBalance(amount: String) -> NSMutableAttributedString{
+        
+        let dollars: String = String(amount.dropLast(2))
+        let cents: String = String(amount.suffix(2))
+        
+        let rootString = NSMutableAttributedString(string: "$", attributes: [.font : UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8])
+        let dollarString = NSMutableAttributedString(string: dollars, attributes: [.font : UIFont.preferredFont(forTextStyle: .title1)])
+        let centString = NSMutableAttributedString(string: cents, attributes: [.font : UIFont.preferredFont(forTextStyle: .footnote), .baselineOffset: 8])
+        
+        rootString.append(dollarString)
+        rootString.append(centString)
+        
+        return rootString
     }
 }
