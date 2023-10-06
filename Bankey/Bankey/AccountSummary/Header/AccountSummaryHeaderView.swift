@@ -36,11 +36,20 @@ extension AccountSummaryHeaderView{
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            contentView.leftAnchor.constraint(equalTo: leftAnchor),
-            contentView.rightAnchor.constraint(equalTo: rightAnchor),
-            contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        let left = contentView.leftAnchor.constraint(equalTo: leftAnchor)
+//        left.priority = .init(rawValue: 999)
+        left.isActive = true
+        
+        let right = contentView.rightAnchor.constraint(equalTo: rightAnchor)
+//        right.priority = .init(rawValue: 999)
+        right.isActive = true
+        
+        let top = contentView.topAnchor.constraint(equalTo: topAnchor)
+//        top.priority = .init(rawValue: 999)
+        top.isActive = true
+        
+        let bottom = contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+//        bottom.priority = .init(rawValue: 999)
+        bottom.isActive = true
     }
 }
