@@ -11,7 +11,7 @@ let appColor: UIColor = .systemTeal
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-   
+    
     var window: UIWindow?
     
     let loginViewController = LoginViewController()
@@ -27,12 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onBoardingContainerViewController.delegate = self
         
+        displayLogin()
+        return true
+    }
+    
+    private func displayLogin(){
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen(){
+        setRootViewController(LocalState.hasOnboarded ? mainViewController: onBoardingContainerViewController)
+    }
+    
+    private func prepMainView(){
         mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = appColor
-        
-        window?.rootViewController = loginViewController
-        return true
     }
 }
 
@@ -52,13 +62,15 @@ extension AppDelegate{
 
 extension AppDelegate: LoginViewControllerDelegate{
     func didLogin() {
-        setRootViewController(LocalState.hasOnboarded ? mainViewController : onBoardingContainerViewController)
+        prepMainView()
+        displayNextScreen()
     }
 }
 
 extension AppDelegate: OnBoardingContainerViewControllerDelegate{
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
+        prepMainView()
         setRootViewController(mainViewController)
     }
 }
