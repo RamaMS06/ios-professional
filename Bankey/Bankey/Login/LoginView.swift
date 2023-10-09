@@ -44,7 +44,7 @@ extension LoginView{
         usernameTF.delegate = self
         
         passwordTF.placeholder = "Password"
-        passwordTF.isSecureTextEntry = true
+        passwordTF.enablePasswordToggle()
         passwordTF.delegate = self
         
         divider.backgroundColor = .secondarySystemFill

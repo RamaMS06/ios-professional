@@ -72,10 +72,12 @@ extension AccountSummaryCell{
         
         nameLabel.font = .preferredFont(forTextStyle: .body)
         nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.text = "No-Fee All-In Chequing"
         
         balanceLabel.font = .preferredFont(forTextStyle: .body)
         balanceLabel.adjustsFontForContentSizeCategory = true
+        balanceLabel.adjustsFontSizeToFitWidth = true
         balanceLabel.text = "Current Balance"
         balanceLabel.textAlignment = .right
         
